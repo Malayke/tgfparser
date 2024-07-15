@@ -12,11 +12,7 @@ A Python module for parsing the TGF (Trivial Graph Format) output of the Maven D
 
 ## Installation
 
-Install the `tgfparser` module using pip:
-
-```sh
-pip install tgfparser
-```
+not publish to pypi yet.
 
 ## Usage
 
@@ -61,7 +57,7 @@ print(f"Root Package: {root_package}")
 Get the direct dependencies of a specific package:
 
 ```python
-direct_deps = parser.direct_dependencies(parser.root_package.package_id)
+direct_deps = parser.get_dependencies(parser.root_package.package_id)
 print("Direct Dependencies:", direct_deps)
 ```
 
@@ -101,7 +97,7 @@ root_package = parser.root_package
 print(f"Root Package: {root_package}")
 
 # Get direct dependencies of the root package
-direct_deps = parser.direct_dependencies(root_package.package_id)
+direct_deps = parser.get_dependencies(root_package.package_id)
 print("Direct Dependencies:", direct_deps)
 
 # Get the full dependency tree
